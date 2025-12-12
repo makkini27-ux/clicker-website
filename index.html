@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Clicker - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <!-- META-теги для SEO -->
+    <meta name="description" content="Speed Clicker - интерактивная игра-кликер. Соревнуйтесь в скорости кликов с друзьями!">
+    <meta name="keywords" content="кликер, игра, таймер, клики, скорость, реакция, тест скорости, игра онлайн, бесплатная игра, кликер онлайн, тест скорости кликов">
+    <meta name="author" content="Speed Clicker Team">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Speed Clicker - Интерактивный кликер">
+    <meta property="og:description" content="Проверьте свою скорость реакции! Кликайте как можно быстрее за 10, 30 или 60 секунд. Бесплатная онлайн игра.">
+    <meta property="og:image" content="https://ваш-логин.github.io/clicker-website/assets/images/og-image.png">
+    <meta property="og:url" content="https://ваш-логин.github.io/clicker-website/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Speed Clicker">
+    <meta name="twitter:description" content="Бесплатная онлайн игра для проверки скорости реакции">
+    <meta name="twitter:image" content="https://ваш-логин.github.io/clicker-website/assets/images/og-image.png">
+    
+    <!-- Дополнительные мета-теги -->
+    <meta name="theme-color" content="#00dbde">
+    <meta name="robots" content="index, follow">
+</head>
+<body>
+    <!-- Навигация -->
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <i class="fas fa-mouse-pointer"></i>
+                <span>SPEED CLICKER</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Главная</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a>
+                <a href="rules.html" class="nav-link"><i class="fas fa-book"></i> Правила</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h1><i class="fas fa-mouse-pointer"></i> ИНТЕРАКТИВНЫЙ КЛИКЕР</h1>
+            <p class="subtitle">Выберите время и начинайте кликать!</p>
+            
+            <!-- Статистика -->
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-value" id="clickCount">0</div>
+                    <div class="stat-label">КЛИКОВ</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="cps">0.0</div>
+                    <div class="stat-label">КЛИКОВ/СЕК</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="bestScore">0</div>
+                    <div class="stat-label">РЕКОРД</div>
+                </div>
+            </div>
+            
+            <!-- Таймеры -->
+            <div class="timer-container">
+                <button class="timer-btn" data-time="10"><i class="fas fa-clock"></i> 10 СЕКУНД</button>
+                <button class="timer-btn" data-time="30"><i class="fas fa-clock"></i> 30 СЕКУНД</button>
+                <button class="timer-btn" data-time="60"><i class="fas fa-clock"></i> 60 СЕКУНД</button>
+            </div>
+            
+            <!-- Текущий таймер -->
+            <div class="current-timer" id="currentTimer">
+                <div>ТАЙМЕР: <span id="timerLabel">10 секунд</span></div>
+                <div class="timer-display" id="timerDisplay">00:10</div>
+                <div class="timer-progress">
+                    <div class="timer-progress-bar" id="timerProgressBar"></div>
+                </div>
+            </div>
+            
+            <!-- Кликер -->
+            <div class="click-area">
+                <div class="pulse-ring"></div>
+                <button class="click-button" id="clickButton">
+                    <i class="fas fa-hand-pointer"></i><br>
+                    <span id="buttonText">ВЫБЕРИТЕ ТАЙМЕР</span>
+                </button>
+            </div>
+            
+            <!-- Управление -->
+            <div class="controls">
+                <button class="control-btn reset" id="resetBtn"><i class="fas fa-redo"></i> СБРОСИТЬ ИГРУ</button>
+            </div>
+            
+            <!-- Инструкция -->
+            <div class="quick-guide">
+                <h3><i class="fas fa-lightbulb"></i> Как играть:</h3>
+                <div class="guide-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p>Выберите время (10, 30 или 60 секунд)</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p>Нажмите на большую кнопку для старта</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p>Кликайте как можно быстрее!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SEO Контент -->
+            <div class="seo-content">
+                <h3>Speed Clicker - лучшая игра для проверки скорости реакции</h3>
+                <p><strong>Игра-кликер онлайн</strong> Speed Clicker позволяет проверить, сколько кликов вы можете сделать за ограниченное время. Это бесплатная браузерная игра, которая работает на любом устройстве.</p>
+                
+                <p>Особенности нашей <strong>игры кликера</strong>:</p>
+                <ul>
+                    <li>Три режима таймера: 10 секунд (спринт), 30 секунд (стандарт), 60 секунд (марафон)</li>
+                    <li>Счетчик кликов в секунду (CPS)</li>
+                    <li>Сохранение вашего рекорда</li>
+                    <li>Адаптивный дизайн для компьютеров и телефонов</li>
+                    <li>Не требует регистрации</li>
+                </ul>
+                
+                <p><strong>Как играть в кликер</strong>: выберите время, нажмите на большую кнопку и кликайте как можно быстрее! Идеально для соревнований с друзьями.</p>
+                
+                <p>Наш <strong>тест скорости кликов</strong> помогает развивать реакцию и моторику. Проверьте, какой у вас результат в <strong>кликере с таймером</strong> и попробуйте побить свой рекорд!</p>
+                
+                <p>Speed Clicker - это не просто <strong>кликер играть бесплатно</strong>, это инструмент для <strong>проверки скорости реакции</strong> и увлекательное времяпровождение.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-mouse-pointer"></i> SPEED CLICKER</h3>
+                <p>Лучшая игра для развития скорости реакции!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="rules.html">Правила</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-envelope"></i> support@speedclicker.ru</p>
+                <p>© 2024 Speed Clicker</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>
