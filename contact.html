@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Clicker - Контакты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <meta name="description" content="Свяжитесь с нами - команда Speed Clicker">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <div class="logo">
+                <i class="fas fa-mouse-pointer"></i>
+                <span>SPEED CLICKER</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a>
+                <a href="rules.html" class="nav-link"><i class="fas fa-book"></i> Правила</a>
+                <a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Контакты</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1><i class="fas fa-envelope"></i> КОНТАКТЫ</h1>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>support@speedclicker.ru</p>
+                        <p>Для технических вопросов и поддержки</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Соцсети</h3>
+                        <div class="social-contact">
+                            <a href="#" class="social-btn vk"><i class="fab fa-vk"></i> ВКонтакте</a>
+                            <a href="#" class="social-btn tg"><i class="fab fa-telegram"></i> Telegram</a>
+                            <a href="#" class="social-btn yt"><i class="fab fa-youtube"></i> YouTube</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>Помощь</h3>
+                        <p>Часто задаваемые вопросы</p>
+                        <a href="rules.html" class="help-link">Посмотреть правила игры →</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2><i class="fas fa-paper-plane"></i> Написать нам</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя:</label>
+                            <input type="text" id="name" placeholder="Введите ваше имя" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Ваш email:</label>
+                            <input type="email" id="email" placeholder="example@mail.ru" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" rows="5" placeholder="Напишите ваше сообщение..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Отправить сообщение
+                        </button>
+                        
+                        <div class="form-note">
+                            <p><i class="fas fa-info-circle"></i> Мы отвечаем в течение 24 часов</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="back-home">
+                <a href="index.html" class="home-btn">
+                    <i class="fas fa-arrow-left"></i> Вернуться на главную
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-mouse-pointer"></i> SPEED CLICKER</h3>
+                <p>Лучшая игра для развития скорости реакции!</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <a href="index.html">Главная</a>
+                <a href="about.html">О проекте</a>
+                <a href="rules.html">Правила игры</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p><i class="fas fa-envelope"></i> support@speedclicker.ru</p>
+                <p>© 2024 Speed Clicker. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+        // Простая обработка формы
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            alert(`Спасибо, ${name}! Ваше сообщение отправлено. Мы ответим на ${email} в течение 24 часов.`);
+            
+            // Очистка формы
+            this.reset();
+        });
+    </script>
+</body>
+</html>
